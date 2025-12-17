@@ -1,1 +1,165 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime Legends — Buy Now</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #0b1220, #05070d 70%);
+      color: #eaf2ff;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(0,255,255,0.15), transparent);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #10192f, #0a1020);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 40px rgba(0,255,255,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 60px rgba(0,255,255,0.35);
+    }
+
+    .card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 20px 0;
+      color: #00ffff;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00ffff, #00aaff);
+      color: #000;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,255,255,0.8);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Anime Legends</h1>
+  <p>Collect. Battle. Outplay.</p>
+</header>
+
+<div class="container">
+  <div class="cards">
+
+    <div class="card">
+      <h2>Starter Pack</h2>
+      <p>Jump straight into battle.</p>
+      <div class="price">$9.99</div>
+      <ul>
+        <li>5 Card Packs</li>
+        <li>Beginner Rule Guide</li>
+        <li>Perfect for new players</li>
+      </ul>
+      <button onclick="buy('Starter Pack')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Battle Bundle</h2>
+      <p>Build stronger decks faster.</p>
+      <div class="price">$24.99</div>
+      <ul>
+        <li>15 Card Packs</li>
+        <li>Exclusive Promo Card</li>
+        <li>Great value</li>
+      </ul>
+      <button onclick="buy('Battle Bundle')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Collector Box</h2>
+      <p>For serious competitors.</p>
+      <div class="price">$49.99</div>
+      <ul>
+        <li>40 Card Packs</li>
+        <li>Collector Storage Box</li>
+        <li>Highest rarity potential</li>
+      </ul>
+      <button onclick="buy('Collector Box')">Buy Now</button>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 Anime Legends. All characters belong to their respective owners.
+</footer>
+
+<script>
+  function buy(item) {
+    alert(item + ' added to cart!');
+  }
+</script>
+
+</body>
+</html>
