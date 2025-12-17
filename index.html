@@ -296,6 +296,7 @@ function removeFromCart(id) {
   cart[id]--;
   if (cart[id] <= 0) delete cart[id];
   updateCart();
+  renderReview();
 }
 
 function updateCart() {
