@@ -181,7 +181,6 @@ footer {
 <li>1 Random Character</li>
 <li>2 Random Boosts</li>
 <li>2 Common Characters</li>
-<li>Perfect for building collections</li>
 </ul>
 <button onclick="addToCart(0)">Add to Cart</button>
 </div>
@@ -189,12 +188,12 @@ footer {
 <!-- BATTLE BOX -->
 <div class="card">
 <h2>Battle Box</h2>
-<p>Everything you need to start.</p>
+<p>Everything you need for a game.</p>
 <div class="price">$14.99</div>
 <ul>
 <li>6 Booster Packs</li>
-<li>Balanced starter options</li>
-<li>Learn the game fast</li>
+<li>Free Rules Booklet</li>
+<li>Free Deck Box</li>
 </ul>
 <button onclick="addToCart(1)">Add to Cart</button>
 </div>
@@ -202,12 +201,12 @@ footer {
 <!-- COLLECTOR -->
 <div class="card">
 <h2>Collector’s Bundle</h2>
-<p>Maximum power. Maximum value.</p>
+<p>Maximum power.</p>
 <div class="price">$34.99</div>
 <ul>
-<li>14 Booster Packs</li>
-<li>Higher chance of Epic & Legendary cards</li>
-<li>Best value for competitors</li>
+<li>14 Booster Packs+Counters+Rules+2 Boxes</li>
+<li>FREE Epic & Legendary card</li>
+<li>Special card, unavailable elsewhere</li>
 </ul>
 <button onclick="addToCart(2)">Add to Cart</button>
 </div>
@@ -218,20 +217,35 @@ footer {
 
 <div class="cards">
 <div class="card">
-<h2>Playmat</h2>
-<div class="price">$9.99</div>
+<h2>Counter Bundle</h2>
+<div class="price">$5.99</div>
+<ul>
+<li>25 red KO counters</li>
+<li>25 green KO counters</li>
+<li>All health counters you need</li>
+</ul>
 <button onclick="addToCart(3)">Add</button>
 </div>
 
 <div class="card">
 <h2>Deck Box</h2>
-<div class="price">$6.99</div>
+<div class="price">$4.99</div>
+<ul>
+<li>Store your cards</li>
+<li>Great safekeeping</li>
+<li>Don't lose 'em</li>
+</ul>
 <button onclick="addToCart(4)">Add</button>
 </div>
 
 <div class="card">
-<h2>Card Sleeves</h2>
-<div class="price">$4.99</div>
+<h2>Rules Booklet</h2>
+<ul>
+<li>Know the rules</li>
+<li>Settle all arguments</li>
+<li>Smoother gameplay</li>
+</ul>
+<div class="price">$2.99</div>
 <button onclick="addToCart(5)">Add</button>
 </div>
 </div>
@@ -266,9 +280,9 @@ const products = [
   { id:0, name:"Booster Pack", price:2.99 },
   { id:1, name:"Battle Box", price:14.99 },
   { id:2, name:"Collector’s Bundle", price:34.99 },
-  { id:3, name:"Playmat", price:9.99 },
-  { id:4, name:"Deck Box", price:6.99 },
-  { id:5, name:"Card Sleeves", price:4.99 }
+  { id:3, name:"Counter Bundle", price:5.99 },
+  { id:4, name:"Deck Box", price:4.99 },
+  { id:5, name:"Rule Booklet", price:2.99 }
 ];
 
 let cart = {};
