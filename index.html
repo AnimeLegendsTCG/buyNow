@@ -265,7 +265,8 @@ footer {
 <div id="tab-checkout" class="container">
 <h2>Checkout</h2>
 <p>Ready to place your order?</p>
-<button onclick="placeOrder()">Place Order</button>
+<p id='code'>Your order code is </p>
+<iframe id='orderform' src="" width="600" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 <button onclick="goToTab('tab-shop')">Cancel</button>
 </div>
 
@@ -307,7 +308,7 @@ function updateCart() {
 function goToTab(tab) {
   document.querySelectorAll(".tabs > div").forEach(t=>t.style.display="none");
   document.getElementById(tab).style.display="block";
-  if(tab==="tab-review") renderReview();
+  renderReview();
 }
 
 function renderReview() {
@@ -328,13 +329,18 @@ function renderReview() {
       </div>`;
   }
   document.getElementById("total").innerText = total.toFixed(2);
+  var encrypted=encodeCart(cart)
+  document.getElementById("code").innerText="Your order code is: "+encrypted;
+  document.getElementById("orderform").src="https://docs.google.com/forms/d/e/1FAIpQLSdSPe7ZUF4Nv5KPblcjjVVTl2IbTqC04LC_y_6ff82m9K3vlQ/viewform?usp=pp_url&entry.1899458643="+encrypted;
 }
-
-function placeOrder(){
-  alert("Order placed!");
-  cart = {};
-  updateCart();
-  goToTab("tab-shop");
+function encodeCart(currcart) {
+  const json = JSON.stringify(currcart);
+  const base64 = btoa(unescape(encodeURIComponent(json)));
+  return base64;
+}
+function decodeCart(code) {
+  const json = decodeURIComponent(escape(atob(code)));
+  return JSON.parse(json);
 }
 
 goToTab("tab-shop");
