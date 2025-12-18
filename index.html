@@ -309,6 +309,7 @@ function goToTab(tab) {
   if (tab=="tab-checkout"&&Object.keys(cart).length==0){
     alert("Error. Empty Cart.")
     goToTab("tab-shop");
+    return;
   }
   document.querySelectorAll(".tabs > div").forEach(t=>t.style.display="none");
   document.getElementById(tab).style.display="block";
